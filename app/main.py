@@ -39,7 +39,7 @@ class CarWashStation:
                       - car.clean_mark) * self.average_rating
                       / self.distance_from_city_center), 1)
 
-    def rate_service(self, rate : int):
+    def rate_service(self, rate : int) -> None:
         self.count_of_ratings += 1
         self.average_rating = (((self.average_rating
                                  * (self.count_of_ratings - 1)) + rate)
